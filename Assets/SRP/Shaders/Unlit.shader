@@ -18,15 +18,12 @@ Shader "Custom RP/Unlit"
             ZWrite [_ZWrite]
 
             HLSLPROGRAM
-            #pragma shader_feature _CLIPPING
-            #pragma vertex UnlitPassVertex
-            #pragma fragment UnlitPassFragment
-            #pragma multi_compile_instancing
-            #include "UnlitPass.hlsl"
-
+                #pragma shader_feature _CLIPPING
+                #pragma multi_compile_instancing
+                #pragma vertex UnlitPassVertex
+                #pragma fragment UnlitPassFragment
+                #include "./UnlitPass.hlsl"
             ENDHLSL
         }
     }
-
-    CustomEditor "CustomShaderGUI"
 }
